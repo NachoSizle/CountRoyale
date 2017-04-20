@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033209CF1EA68CDB00B760F1 /* DesksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209CE1EA68CDB00B760F1 /* DesksController.swift */; };
+		033209D31EA68E8700B760F1 /* FAIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209D11EA68E8700B760F1 /* FAIcon.swift */; };
+		033209D41EA68E8700B760F1 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 033209D21EA68E8700B760F1 /* FontAwesome.ttf */; };
+		033209D81EA68FA800B760F1 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209D71EA68FA800B760F1 /* StatisticsController.swift */; };
+		033209DE1EA7BE0400B760F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 033209DD1EA7BE0400B760F1 /* GoogleService-Info.plist */; };
+		033209E11EA7BEDE00B760F1 /* CardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209E01EA7BEDE00B760F1 /* CardsCollectionViewCell.swift */; };
 		03434C731EA668710012A907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434C721EA668710012A907 /* AppDelegate.swift */; };
-		03434C751EA668710012A907 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434C741EA668710012A907 /* ViewController.swift */; };
+		03434C751EA668710012A907 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434C741EA668710012A907 /* MainTabBarController.swift */; };
 		03434C781EA668710012A907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03434C761EA668710012A907 /* Main.storyboard */; };
 		03434C7A1EA668710012A907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03434C791EA668710012A907 /* Assets.xcassets */; };
 		03434C7D1EA668710012A907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03434C7B1EA668710012A907 /* LaunchScreen.storyboard */; };
+		03FF79F51EA90EAF0028AEE1 /* Barbaros.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FF79F41EA90EAF0028AEE1 /* Barbaros.png */; };
+		C05120CD71DDABCD9737DF30 /* Pods_Count_Royale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0735311A9093D7B3DDDA7E72 /* Pods_Count_Royale.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		033209CE1EA68CDB00B760F1 /* DesksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesksController.swift; sourceTree = "<group>"; };
+		033209D11EA68E8700B760F1 /* FAIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAIcon.swift; sourceTree = "<group>"; };
+		033209D21EA68E8700B760F1 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		033209D71EA68FA800B760F1 /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
+		033209DD1EA7BE0400B760F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		033209E01EA7BEDE00B760F1 /* CardsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewCell.swift; sourceTree = "<group>"; };
 		03434C6F1EA668710012A907 /* Count Royale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count Royale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03434C721EA668710012A907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03434C741EA668710012A907 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03434C741EA668710012A907 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		03434C771EA668710012A907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03434C791EA668710012A907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03434C7C1EA668710012A907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03434C7E1EA668710012A907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03FF79F41EA90EAF0028AEE1 /* Barbaros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Barbaros.png; sourceTree = "<group>"; };
+		0735311A9093D7B3DDDA7E72 /* Pods_Count_Royale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Count_Royale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5F66751FC51754BE9B48D3 /* Pods-Count Royale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Count Royale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Count Royale/Pods-Count Royale.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D400F94916E328A9147424 /* Pods-Count Royale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Count Royale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Count Royale/Pods-Count Royale.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05120CD71DDABCD9737DF30 /* Pods_Count_Royale.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033209CD1EA68C4F00B760F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03434C741EA668710012A907 /* MainTabBarController.swift */,
+				033209CE1EA68CDB00B760F1 /* DesksController.swift */,
+				033209D71EA68FA800B760F1 /* StatisticsController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		033209D01EA68E7300B760F1 /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				033209D11EA68E8700B760F1 /* FAIcon.swift */,
+				033209D21EA68E8700B760F1 /* FontAwesome.ttf */,
+			);
+			name = FontAwesome;
+			sourceTree = "<group>";
+		};
+		033209DA1EA7BCAA00B760F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03FF79F41EA90EAF0028AEE1 /* Barbaros.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		033209DF1EA7BE9900B760F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				033209E01EA7BEDE00B760F1 /* CardsCollectionViewCell.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		03434C661EA668710012A907 = {
 			isa = PBXGroup;
 			children = (
 				03434C711EA668710012A907 /* Count Royale */,
 				03434C701EA668710012A907 /* Products */,
+				507C9C2B15FA2D11A11DB80D /* Pods */,
+				D77C4A910FA55554A4EE5754 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +110,35 @@
 		03434C711EA668710012A907 /* Count Royale */ = {
 			isa = PBXGroup;
 			children = (
+				033209DF1EA7BE9900B760F1 /* Models */,
+				033209DA1EA7BCAA00B760F1 /* Resources */,
+				033209D01EA68E7300B760F1 /* FontAwesome */,
+				033209CD1EA68C4F00B760F1 /* Controllers */,
 				03434C721EA668710012A907 /* AppDelegate.swift */,
-				03434C741EA668710012A907 /* ViewController.swift */,
 				03434C761EA668710012A907 /* Main.storyboard */,
 				03434C791EA668710012A907 /* Assets.xcassets */,
 				03434C7B1EA668710012A907 /* LaunchScreen.storyboard */,
 				03434C7E1EA668710012A907 /* Info.plist */,
+				033209DD1EA7BE0400B760F1 /* GoogleService-Info.plist */,
 			);
 			path = "Count Royale";
+			sourceTree = "<group>";
+		};
+		507C9C2B15FA2D11A11DB80D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F5F66751FC51754BE9B48D3 /* Pods-Count Royale.debug.xcconfig */,
+				F2D400F94916E328A9147424 /* Pods-Count Royale.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D77C4A910FA55554A4EE5754 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0735311A9093D7B3DDDA7E72 /* Pods_Count_Royale.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03434C811EA668710012A907 /* Build configuration list for PBXNativeTarget "Count Royale" */;
 			buildPhases = (
+				F9E142A1E817C16697A2B0FF /* [CP] Check Pods Manifest.lock */,
 				03434C6B1EA668710012A907 /* Sources */,
 				03434C6C1EA668710012A907 /* Frameworks */,
 				03434C6D1EA668710012A907 /* Resources */,
+				7A424D708028406C13106A70 /* [CP] Embed Pods Frameworks */,
+				4BB267C1E8B2CDAD2AA9D260 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,18 +207,73 @@
 				03434C7D1EA668710012A907 /* LaunchScreen.storyboard in Resources */,
 				03434C7A1EA668710012A907 /* Assets.xcassets in Resources */,
 				03434C781EA668710012A907 /* Main.storyboard in Resources */,
+				033209D41EA68E8700B760F1 /* FontAwesome.ttf in Resources */,
+				033209DE1EA7BE0400B760F1 /* GoogleService-Info.plist in Resources */,
+				03FF79F51EA90EAF0028AEE1 /* Barbaros.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BB267C1E8B2CDAD2AA9D260 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Count Royale/Pods-Count Royale-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A424D708028406C13106A70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Count Royale/Pods-Count Royale-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9E142A1E817C16697A2B0FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03434C6B1EA668710012A907 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03434C751EA668710012A907 /* ViewController.swift in Sources */,
+				03434C751EA668710012A907 /* MainTabBarController.swift in Sources */,
 				03434C731EA668710012A907 /* AppDelegate.swift in Sources */,
+				033209E11EA7BEDE00B760F1 /* CardsCollectionViewCell.swift in Sources */,
+				033209CF1EA68CDB00B760F1 /* DesksController.swift in Sources */,
+				033209D31EA68E8700B760F1 /* FAIcon.swift in Sources */,
+				033209D81EA68FA800B760F1 /* StatisticsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +394,12 @@
 		};
 		03434C821EA668710012A907 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F5F66751FC51754BE9B48D3 /* Pods-Count Royale.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5ASV836QR2;
 				INFOPLIST_FILE = "Count Royale/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.countRoyale.nachosizle.Count-Royale";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +409,12 @@
 		};
 		03434C831EA668710012A907 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D400F94916E328A9147424 /* Pods-Count Royale.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5ASV836QR2;
 				INFOPLIST_FILE = "Count Royale/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.countRoyale.nachosizle.Count-Royale";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +441,7 @@
 				03434C831EA668710012A907 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

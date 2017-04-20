@@ -1,0 +1,6 @@
+framework module Pods_Count_Royale {
+  umbrella header "Pods-Count Royale-umbrella.h"
+
+  export *
+  module * { export * }
+}
