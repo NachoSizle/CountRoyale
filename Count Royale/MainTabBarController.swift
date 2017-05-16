@@ -34,9 +34,8 @@ class MainTabBarController: UITabBarController {
 //                TODO crear modalAlert para informar del error al usuario
                 return
             }
-            
 //            Successfully init sesion for this user
-            print(user!)
+            print("Init session successfully")
         })
     }
 

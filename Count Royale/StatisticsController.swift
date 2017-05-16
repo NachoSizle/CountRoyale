@@ -9,48 +9,63 @@
 import UIKit
 import Firebase
 
-class StatisticsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class StatisticsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerPreviewingDelegate {
     
     @IBOutlet var cardCollectionView: UICollectionView!
     
-    let nameCards: [String] = ["Arqueras", "Barbaros", "BarbarosDeElite", "Bombardero", "Caballero", "Canion", "Descarga", "Duendes", "DuendesConLanza", "Esbirros", "EspiritusDeFuego", "EspirituDeHielo", "Esqueletos", "Flechas", "GiganteNoble", "HordaDeEsbirros", "Mortero", "PandillaDeDuendes", "TorreTesla"]
+    let nameCommonCards: [String] = ["Arqueras", "Barbaros", "BarbarosDeElite", "Bombardero", "Caballero", "Canion", "Descarga", "Duendes", "DuendesConLanza", "Esbirros", "EspiritusDeFuego", "EspirituDeHielo", "Esqueletos", "Flechas", "GiganteNoble", "HordaDeEsbirros", "Mortero", "PandillaDeDuendes", "TorreTesla"]
     
-    let titleLabel: UILabel = {
-        let lbl = UILabel()
-        lbl.text = "Select a card"
-        lbl.font = UIFont(name: lbl.font.fontName, size: 30)
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        return lbl
-    }()
+    let nameSpecialCards: [String] = ["ArieteDeBatalla", "BolaDeFuego", "ChozaDeBarbaros", "ChozaDeDuendes", "Cohete", "Curacion", "Gigante", "GolemDeHielo", "Horno", "Lanzadardos", "Lapida", "Mago", "MegaEsbirro", "MiniPekka", "Montapuercos", "Mosquetera", "RecolectorDeElixir", "TorreBombardera", "TorreInfernal", "TrioDeMosqueteras", "Valquiria"]
+    
+    let nameEpicCards: [String] = ["Ballesta", "BarrilDeDuendes", "BebeDragon", "Bruja", "Clon", "EjercitoDeEsqueletos", "Espejo", "EsqueletoGigante", "Furia", "Globo", "Golem", "Guardias", "Hielo", "Lanzarrocas", "P.E.K.K.A.", "PrincipeOscuro", "Principe", "Rayo", "Tornado", "Veneno", "Verdugo"]
+    
+    let nameLegendaryCards: [String] = ["Bandida", "BrujaNocturna", "Cementerio", "Chispitas", "DragonInfernal", "Tronco", "Leniador", "MagoDeHielo", "MagoElectrico", "Minero", "Princesa", "SabuesoDeLava"]
+    
+    var arrToDownloadAllPhotos: String = ""
+    var arrToUse: [String] = []
+    var imageDownloaded: UIImage = UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backgroundCountRoyale.jpg"))
+
         
+        print("Array to download all photos")
+        print(arrToDownloadAllPhotos)
+        
+        switch arrToDownloadAllPhotos {
+            case "Common":
+                arrToUse = self.nameCommonCards
+            case "Specials":
+                arrToUse = self.nameSpecialCards
+            case "Epic":
+                arrToUse = self.nameEpicCards
+            case "Legendaries":
+                arrToUse = self.nameLegendaryCards
+            default:
+                arrToUse = self.nameCommonCards
+        }
+        
+        
+        print("Array to use")
+        print(arrToUse)
+
         // Do any additional setup after loading the view.
         self.cardCollectionView.delegate = self
         self.cardCollectionView.dataSource = self
         
-        view.addSubview(self.titleLabel)
-        
-        setTitleLabelInView()
-        
         let layout = cardCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsetsMake(100, 15, 70, 15);
-        layout.minimumInteritemSpacing = 5; // this number could be anything <=5. Need it here because the default is 10.
         let widthScreen: CGFloat = cardCollectionView.frame.size.width
-        layout.itemSize = CGSize(width: (widthScreen - 20)/3, height: 100) // 20 is 2*5 for the 2 edges plus 2*5 for the spaces between the cells
-    }
-    
-    func setTitleLabelInView(){
         
-        let widthScreen: CGFloat = (cardCollectionView.frame.size.width)/2
-        let widthLblTitle: CGFloat = (titleLabel.frame.size.width)/2
+        layout.sectionInset = UIEdgeInsetsMake(20, 15, 70, 0);
+        layout.minimumInteritemSpacing = 5
+        layout.itemSize = CGSize(width: (widthScreen - 20)/3, height: 100)
         
-        titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: widthScreen - widthLblTitle).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 25).isActive = true
-        
-        titleLabel.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        if traitCollection.forceTouchCapability == UIForceTouchCapability.available {
+            registerForPreviewing(with: self, sourceView: cardCollectionView)
+        } else {
+            print("Not compatible with 3dTouch")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,7 +78,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.nameCards.count
+        return self.arrToUse.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,11 +87,11 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
         let index = indexPath.row
         
         let storageRef = FIRStorage.storage().reference()
-
+        
         
         if ((FIRAuth.auth()?.currentUser?.uid) != nil) {
             
-            let ref = storageRef.child("Cards").child("Common").child(self.nameCards[index] + ".png")
+            let ref = storageRef.child("Cards").child(arrToDownloadAllPhotos).child(arrToUse[index] + ".png")
                 
                 ref.downloadURL(completion: { (url, error) in
                     
@@ -120,6 +135,116 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
         UIGraphicsEndImageContext()
         
         return newImage!
+    }
+    
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        
+        let indexSelectedRow = self.cardCollectionView.indexPathForItem(at: location)?.row
+        
+        print(arrToUse[indexSelectedRow!])
+        
+        let peekController = StatisticsCardsDetailViewController()
+        
+        let nameOfCard:String = arrToUse[indexSelectedRow!]
+        let nameOfType:String = arrToDownloadAllPhotos
+        
+        print("Loading..")
+        
+        let storageRef = FIRStorage.storage().reference()
+        
+        if ((FIRAuth.auth()?.currentUser?.uid) != nil) {
+            
+            let ref = storageRef.child("Cards").child("Description").child(nameOfType).child(nameOfCard + ".png")
+            
+            ref.downloadURL(completion: { (url, error) in
+                
+                if error != nil {
+                    print(error!.localizedDescription)
+                    return
+                }
+                URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                    
+                    if error != nil {
+                        print(error!)
+                        return
+                    }
+                    
+                    guard let imageData = UIImage(data: data!) else { return }
+                    
+                    print(imageData)
+                    
+                    DispatchQueue.main.async {
+                        peekController.imgViewCardDetail.image = imageData
+                        peekController.imgViewCardDetail.contentMode = .scaleAspectFill
+                    }
+                }).resume()
+            })
+            
+        } else {
+            print("Does not permission")
+        }
+        
+        return peekController
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        goToRepo()
+    }
+    
+    func goToRepo(){
+        let urlRepo = URL(string: "http://clashroyale.wikia.com/wiki/")
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(urlRepo!)
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+        let destination = segue.destination
+        
+        if let collectionViewCellSelected = sender as? CardsCollectionViewCell {
+            let indexOfCellSelected = self.cardCollectionView.indexPath(for: collectionViewCellSelected)
+            let nameOfCard:String = self.arrToUse[(indexOfCellSelected?.row)!]
+            let nameOfType:String = arrToDownloadAllPhotos
+            
+            let storageRef = FIRStorage.storage().reference()
+            
+            if ((FIRAuth.auth()?.currentUser?.uid) != nil) {
+                
+                let ref = storageRef.child("Cards").child("Description").child(nameOfType).child(nameOfCard + ".png")
+                
+                ref.downloadURL(completion: { (url, error) in
+                    
+                    if error != nil {
+                        print(error!.localizedDescription)
+                        return
+                    }
+                    URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                        
+                        if error != nil {
+                            print(error!)
+                            return
+                        }
+                        
+                        guard let imageData = UIImage(data: data!) else { return }
+                        
+                        print(imageData)
+                        
+                        DispatchQueue.main.async {
+                            (destination as! StatisticsCardsDetailViewController).imgViewCardDetail.image = imageData
+                            (destination as! StatisticsCardsDetailViewController).imgViewCardDetail.contentMode = .scaleAspectFill
+                        }
+                    }).resume()
+                })
+                
+            } else {
+                print("Does not permission")
+            }
+        }
     }
 }
 

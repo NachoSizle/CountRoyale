@@ -9,14 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Statistics-->
+        <!--Statistics Cards-->
         <scene sceneID="gUy-9h-KBj">
             <objects>
-                <viewController id="FeV-Wb-rtS" customClass="StatisticsController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StadisticsCardView" id="FeV-Wb-rtS" userLabel="Statistics Cards" customClass="StatisticsController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nzq-yB-pZe" userLabel="Cards Collection View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.21485669971976715" green="0.60398036625451212" blue="0.86135786802030456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QOY-ms-RUf">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -40,20 +39,21 @@
                                 <size key="customSize" width="110" height="140"/>
                                 <connections>
                                     <outlet property="imgCardView" destination="wQf-AR-UmX" id="G2j-cG-sf7"/>
+                                    <segue destination="tXi-Ys-2dS" kind="show" id="VQB-Lv-SHx"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Statistics" id="avW-3J-Shy"/>
                     <connections>
-                        <outlet property="cardCollectionView" destination="Nzq-yB-pZe" id="I2o-no-Yxi"/>
+                        <outlet property="cardCollectionView" destination="Nzq-yB-pZe" id="Jkf-9N-4Pg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzh-rH-mSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117.3913043478262" y="78.260869565217391"/>
+            <point key="canvasLocation" x="2235" y="196"/>
         </scene>
-        <!--Desks-->
+        <!--Decks-->
         <scene sceneID="gPW-4H-iwG">
             <objects>
                 <viewController id="lTa-e5-PWM" customClass="DesksController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Desks" id="YTU-wZ-Zf4"/>
+                    <tabBarItem key="tabBarItem" title="Decks" id="YTU-wZ-Zf4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvx-Rq-JXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,6 +76,8 @@
         <scene sceneID="L5f-5s-glA">
             <objects>
                 <tabBarController id="CqM-BG-XuZ" customClass="MainTabBarController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="RpT-Oe-7EU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -84,12 +86,118 @@
                     <connections>
                         <outlet property="mainTabBar" destination="RpT-Oe-7EU" id="8B8-o1-RcS"/>
                         <segue destination="lTa-e5-PWM" kind="relationship" relationship="viewControllers" id="bnS-Ox-ylP"/>
-                        <segue destination="FeV-Wb-rtS" kind="relationship" relationship="viewControllers" id="Tln-o7-lle"/>
+                        <segue destination="nmK-5r-HHF" kind="relationship" relationship="viewControllers" id="nPD-q4-F6A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7I-u3-pkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-356" y="79"/>
+        </scene>
+        <!--Select type-->
+        <scene sceneID="hDm-nb-ZGJ">
+            <objects>
+                <viewController id="tKe-ds-gIL" customClass="StatisticsCardsController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mTX-5o-AZz" userLabel="Cards Collection View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hfq-DS-2HD">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TypeCardViewCell" id="WSw-iV-PWU" customClass="CardsCollectionViewCell" customModule="Count_Royale" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-g2-p2z">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="140"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <size key="customSize" width="110" height="140"/>
+                                <connections>
+                                    <outlet property="imgCardView" destination="7Me-g2-p2z" id="JNi-Bn-yNi"/>
+                                    <segue destination="FeV-Wb-rtS" kind="show" identifier="showCardInDetail" id="YHs-oX-Fra"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Select type" id="bhB-BW-PGV"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <connections>
+                        <outlet property="typesCardCollectionView" destination="mTX-5o-AZz" id="izP-UX-lcT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grq-Gb-2IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344.9275362318842" y="195.6521739130435"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="Jop-c2-y6O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nmK-5r-HHF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Statistics" id="yHo-Nf-mAx"/>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5pS-Jp-JM8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tKe-ds-gIL" kind="relationship" relationship="rootViewController" id="5eq-17-Rjc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Knn-tr-3ZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="195.6521739130435"/>
+        </scene>
+        <!--Statistics Cards-->
+        <scene sceneID="AKW-L1-dt8">
+            <objects>
+                <viewController storyboardIdentifier="StadisticsCardDetailView" id="tXi-Ys-2dS" userLabel="Statistics Cards" customClass="StatisticsCardsDetailViewController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YRx-wo-Vu4"/>
+                        <viewControllerLayoutGuide type="bottom" id="zTm-zr-tXt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qty-le-yGe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2B-wB-hqg">
+                                <rect key="frame" x="0.0" y="64" width="414" height="555"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-eT-J9v">
+                                <rect key="frame" x="128" y="627" width="159" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="More info">
+                                    <color key="titleColor" red="0.9334351206" green="0.9334351206" blue="0.9334351206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToMoreInfo:" destination="tXi-Ys-2dS" eventType="touchUpInside" id="C6s-F6-0ic"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Statistics" id="PKv-rr-Dmt"/>
+                    <connections>
+                        <outlet property="btnShowMoreInfo" destination="mrX-eT-J9v" id="ffx-Yp-amg"/>
+                        <outlet property="imgViewCardDetail" destination="l2B-wB-hqg" id="oRt-Tm-Pmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nqt-sd-CHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073.913043478261" y="195.6521739130435"/>
         </scene>
     </scenes>
 </document>

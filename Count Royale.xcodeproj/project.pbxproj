@@ -13,11 +13,24 @@
 		033209D81EA68FA800B760F1 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209D71EA68FA800B760F1 /* StatisticsController.swift */; };
 		033209DE1EA7BE0400B760F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 033209DD1EA7BE0400B760F1 /* GoogleService-Info.plist */; };
 		033209E11EA7BEDE00B760F1 /* CardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209E01EA7BEDE00B760F1 /* CardsCollectionViewCell.swift */; };
+		033C2D541EC4C1E200FCC571 /* Bandida.png in Resources */ = {isa = PBXBuildFile; fileRef = 033C2D531EC4C1E200FCC571 /* Bandida.png */; };
+		033C2D561EC4C20900FCC571 /* StatisticsCardsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C2D551EC4C20900FCC571 /* StatisticsCardsDetailViewController.swift */; };
 		03434C731EA668710012A907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434C721EA668710012A907 /* AppDelegate.swift */; };
 		03434C751EA668710012A907 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434C741EA668710012A907 /* MainTabBarController.swift */; };
 		03434C781EA668710012A907 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03434C761EA668710012A907 /* Main.storyboard */; };
-		03434C7A1EA668710012A907 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03434C791EA668710012A907 /* Assets.xcassets */; };
 		03434C7D1EA668710012A907 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03434C7B1EA668710012A907 /* LaunchScreen.storyboard */; };
+		0351615A1ECB6644008D866C /* backgroundCountRoyale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 035161581ECB6644008D866C /* backgroundCountRoyale.jpg */; };
+		0351615B1ECB6644008D866C /* initImageCountRoyale.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 035161591ECB6644008D866C /* initImageCountRoyale.jpeg */; };
+		036AE31A1EC21A00000CAF04 /* countRoyaleIcon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE3181EC21A00000CAF04 /* countRoyaleIcon120.png */; };
+		036AE31B1EC21A00000CAF04 /* countRoyaleIcon180.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE3191EC21A00000CAF04 /* countRoyaleIcon180.png */; };
+		036AE31D1EC21A1C000CAF04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036AE31C1EC21A1C000CAF04 /* Assets.xcassets */; };
+		036AE3231EC23E4F000CAF04 /* Common.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE31E1EC23E4F000CAF04 /* Common.png */; };
+		036AE3241EC23E4F000CAF04 /* Epic.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE31F1EC23E4F000CAF04 /* Epic.png */; };
+		036AE3261EC23E4F000CAF04 /* MysteryCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE3211EC23E4F000CAF04 /* MysteryCard.png */; };
+		036AE3271EC23E4F000CAF04 /* Specials.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE3221EC23E4F000CAF04 /* Specials.png */; };
+		036AE3291EC23FEF000CAF04 /* Legendaries.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE3281EC23FEF000CAF04 /* Legendaries.png */; };
+		036AE32B1EC245F0000CAF04 /* deskIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE32A1EC245F0000CAF04 /* deskIco.png */; };
+		03F763AE1EAFAE18008167F5 /* StatisticsCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F763AD1EAFAE18008167F5 /* StatisticsCardsController.swift */; };
 		03FF79F51EA90EAF0028AEE1 /* Barbaros.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FF79F41EA90EAF0028AEE1 /* Barbaros.png */; };
 		C05120CD71DDABCD9737DF30 /* Pods_Count_Royale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0735311A9093D7B3DDDA7E72 /* Pods_Count_Royale.framework */; };
 /* End PBXBuildFile section */
@@ -29,14 +42,27 @@
 		033209D71EA68FA800B760F1 /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
 		033209DD1EA7BE0400B760F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		033209E01EA7BEDE00B760F1 /* CardsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewCell.swift; sourceTree = "<group>"; };
+		033C2D531EC4C1E200FCC571 /* Bandida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bandida.png; path = Imagenes.png/Bandida.png; sourceTree = "<group>"; };
+		033C2D551EC4C20900FCC571 /* StatisticsCardsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsCardsDetailViewController.swift; sourceTree = "<group>"; };
 		03434C6F1EA668710012A907 /* Count Royale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Count Royale.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03434C721EA668710012A907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03434C741EA668710012A907 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		03434C771EA668710012A907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		03434C791EA668710012A907 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03434C7C1EA668710012A907 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03434C7E1EA668710012A907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03FF79F41EA90EAF0028AEE1 /* Barbaros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Barbaros.png; sourceTree = "<group>"; };
+		035161581ECB6644008D866C /* backgroundCountRoyale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroundCountRoyale.jpg; path = Imagenes.png/backgroundCountRoyale.jpg; sourceTree = "<group>"; };
+		035161591ECB6644008D866C /* initImageCountRoyale.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = initImageCountRoyale.jpeg; path = Imagenes.png/initImageCountRoyale.jpeg; sourceTree = "<group>"; };
+		036AE3181EC21A00000CAF04 /* countRoyaleIcon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = countRoyaleIcon120.png; path = Imagenes.png/countRoyaleIcon120.png; sourceTree = "<group>"; };
+		036AE3191EC21A00000CAF04 /* countRoyaleIcon180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = countRoyaleIcon180.png; path = Imagenes.png/countRoyaleIcon180.png; sourceTree = "<group>"; };
+		036AE31C1EC21A1C000CAF04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		036AE31E1EC23E4F000CAF04 /* Common.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Common.png; path = Imagenes.png/Common.png; sourceTree = "<group>"; };
+		036AE31F1EC23E4F000CAF04 /* Epic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Epic.png; path = Imagenes.png/Epic.png; sourceTree = "<group>"; };
+		036AE3211EC23E4F000CAF04 /* MysteryCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MysteryCard.png; path = Imagenes.png/MysteryCard.png; sourceTree = "<group>"; };
+		036AE3221EC23E4F000CAF04 /* Specials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Specials.png; path = Imagenes.png/Specials.png; sourceTree = "<group>"; };
+		036AE3281EC23FEF000CAF04 /* Legendaries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Legendaries.png; path = Imagenes.png/Legendaries.png; sourceTree = "<group>"; };
+		036AE32A1EC245F0000CAF04 /* deskIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deskIco.png; path = Imagenes.png/deskIco.png; sourceTree = "<group>"; };
+		03F763AD1EAFAE18008167F5 /* StatisticsCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsCardsController.swift; sourceTree = "<group>"; };
+		03FF79F41EA90EAF0028AEE1 /* Barbaros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barbaros.png; path = Imagenes.png/Barbaros.png; sourceTree = "<group>"; };
 		0735311A9093D7B3DDDA7E72 /* Pods_Count_Royale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Count_Royale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5F66751FC51754BE9B48D3 /* Pods-Count Royale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Count Royale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Count Royale/Pods-Count Royale.debug.xcconfig"; sourceTree = "<group>"; };
 		F2D400F94916E328A9147424 /* Pods-Count Royale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Count Royale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Count Royale/Pods-Count Royale.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +86,8 @@
 				03434C741EA668710012A907 /* MainTabBarController.swift */,
 				033209CE1EA68CDB00B760F1 /* DesksController.swift */,
 				033209D71EA68FA800B760F1 /* StatisticsController.swift */,
+				03F763AD1EAFAE18008167F5 /* StatisticsCardsController.swift */,
+				033C2D551EC4C20900FCC571 /* StatisticsCardsDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -76,6 +104,17 @@
 		033209DA1EA7BCAA00B760F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				035161581ECB6644008D866C /* backgroundCountRoyale.jpg */,
+				035161591ECB6644008D866C /* initImageCountRoyale.jpeg */,
+				033C2D531EC4C1E200FCC571 /* Bandida.png */,
+				036AE32A1EC245F0000CAF04 /* deskIco.png */,
+				036AE3281EC23FEF000CAF04 /* Legendaries.png */,
+				036AE31E1EC23E4F000CAF04 /* Common.png */,
+				036AE31F1EC23E4F000CAF04 /* Epic.png */,
+				036AE3211EC23E4F000CAF04 /* MysteryCard.png */,
+				036AE3221EC23E4F000CAF04 /* Specials.png */,
+				036AE3181EC21A00000CAF04 /* countRoyaleIcon120.png */,
+				036AE3191EC21A00000CAF04 /* countRoyaleIcon180.png */,
 				03FF79F41EA90EAF0028AEE1 /* Barbaros.png */,
 			);
 			name = Resources;
@@ -116,8 +155,8 @@
 				033209CD1EA68C4F00B760F1 /* Controllers */,
 				03434C721EA668710012A907 /* AppDelegate.swift */,
 				03434C761EA668710012A907 /* Main.storyboard */,
-				03434C791EA668710012A907 /* Assets.xcassets */,
 				03434C7B1EA668710012A907 /* LaunchScreen.storyboard */,
+				036AE31C1EC21A1C000CAF04 /* Assets.xcassets */,
 				03434C7E1EA668710012A907 /* Info.plist */,
 				033209DD1EA7BE0400B760F1 /* GoogleService-Info.plist */,
 			);
@@ -204,11 +243,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036AE31B1EC21A00000CAF04 /* countRoyaleIcon180.png in Resources */,
+				0351615B1ECB6644008D866C /* initImageCountRoyale.jpeg in Resources */,
+				033C2D541EC4C1E200FCC571 /* Bandida.png in Resources */,
+				036AE3261EC23E4F000CAF04 /* MysteryCard.png in Resources */,
 				03434C7D1EA668710012A907 /* LaunchScreen.storyboard in Resources */,
-				03434C7A1EA668710012A907 /* Assets.xcassets in Resources */,
+				036AE3291EC23FEF000CAF04 /* Legendaries.png in Resources */,
+				036AE3241EC23E4F000CAF04 /* Epic.png in Resources */,
+				036AE3231EC23E4F000CAF04 /* Common.png in Resources */,
+				036AE32B1EC245F0000CAF04 /* deskIco.png in Resources */,
 				03434C781EA668710012A907 /* Main.storyboard in Resources */,
+				036AE3271EC23E4F000CAF04 /* Specials.png in Resources */,
 				033209D41EA68E8700B760F1 /* FontAwesome.ttf in Resources */,
 				033209DE1EA7BE0400B760F1 /* GoogleService-Info.plist in Resources */,
+				036AE31A1EC21A00000CAF04 /* countRoyaleIcon120.png in Resources */,
+				0351615A1ECB6644008D866C /* backgroundCountRoyale.jpg in Resources */,
+				036AE31D1EC21A1C000CAF04 /* Assets.xcassets in Resources */,
 				03FF79F51EA90EAF0028AEE1 /* Barbaros.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +323,8 @@
 				033209E11EA7BEDE00B760F1 /* CardsCollectionViewCell.swift in Sources */,
 				033209CF1EA68CDB00B760F1 /* DesksController.swift in Sources */,
 				033209D31EA68E8700B760F1 /* FAIcon.swift in Sources */,
+				03F763AE1EAFAE18008167F5 /* StatisticsCardsController.swift in Sources */,
+				033C2D561EC4C20900FCC571 /* StatisticsCardsDetailViewController.swift in Sources */,
 				033209D81EA68FA800B760F1 /* StatisticsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
