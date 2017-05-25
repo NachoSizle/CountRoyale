@@ -21,13 +21,18 @@ class StatisticsCardsDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backgroundCountRoyale.jpg"))
-
+//        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backgroundCountRoyalex3.jpg"))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func fillViewToComponents(imgToFill: UIImage) {
+        self.imgViewCardDetail = UIImageView()
+        self.imgViewCardDetail?.image = imgToFill
+        self.imgViewCardDetail.contentMode = .scaleAspectFill
     }
     
     func goToRepo(){

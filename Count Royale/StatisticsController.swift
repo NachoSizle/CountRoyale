@@ -27,9 +27,8 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backgroundCountRoyale.jpg"))
+        self.view.backgroundColor = UIColor.white
 
-        
         print("Array to download all photos")
         print(arrToDownloadAllPhotos)
         
@@ -42,6 +41,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
                 arrToUse = self.nameEpicCards
             case "Legendaries":
                 arrToUse = self.nameLegendaryCards
+                self.cardCollectionView.isScrollEnabled = false
             default:
                 arrToUse = self.nameCommonCards
         }
@@ -57,7 +57,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
         let layout = cardCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let widthScreen: CGFloat = cardCollectionView.frame.size.width
         
-        layout.sectionInset = UIEdgeInsetsMake(20, 15, 70, 0);
+        layout.sectionInset = UIEdgeInsetsMake(20, 15, 20, 0);
         layout.minimumInteritemSpacing = 5
         layout.itemSize = CGSize(width: (widthScreen - 20)/3, height: 100)
         
@@ -144,7 +144,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
         
         print(arrToUse[indexSelectedRow!])
         
-        let peekController = StatisticsCardsDetailViewController()
+        let peekController = UIViewController()
         
         let nameOfCard:String = arrToUse[indexSelectedRow!]
         let nameOfType:String = arrToDownloadAllPhotos
@@ -163,6 +163,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
                     print(error!.localizedDescription)
                     return
                 }
+                
                 URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                     
                     if error != nil {
@@ -173,11 +174,12 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
                     guard let imageData = UIImage(data: data!) else { return }
                     
                     print(imageData)
-                    
+                                        
                     DispatchQueue.main.async {
-                        peekController.imgViewCardDetail.image = imageData
-                        peekController.imgViewCardDetail.contentMode = .scaleAspectFill
+                        peekController.view.backgroundColor = UIColor(patternImage: imageData)
+                        
                     }
+                    
                 }).resume()
             })
             

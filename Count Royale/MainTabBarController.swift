@@ -16,11 +16,11 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let deskTabBarItem: UITabBarItem = mainTabBar.items![0]
+        let deckTabBarItem: UITabBarItem = mainTabBar.items![0]
         let statisticsTabBarItem: UITabBarItem = mainTabBar.items![1]
         
         statisticsTabBarItem.setFAIcon(icon: .FABarChart)
-        deskTabBarItem.setFAIcon(icon: .FAUsers)
+        deckTabBarItem.setFAIcon(icon: .FAUsers)
         
         setCurrentUser()
         

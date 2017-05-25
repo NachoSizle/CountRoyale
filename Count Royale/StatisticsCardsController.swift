@@ -16,7 +16,7 @@ class StatisticsCardsController: UIViewController, UICollectionViewDelegate, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backgroundCountRoyale.jpg"))
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backgroundCountRoyalex3.jpg"))
 
         self.typesCardCollectionView.delegate = self
         self.typesCardCollectionView.dataSource = self

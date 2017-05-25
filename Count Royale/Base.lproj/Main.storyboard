@@ -53,10 +53,11 @@
             </objects>
             <point key="canvasLocation" x="2235" y="196"/>
         </scene>
-        <!--Decks-->
+        <!--Get your Deck!-->
         <scene sceneID="gPW-4H-iwG">
             <objects>
-                <viewController id="lTa-e5-PWM" customClass="DesksController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvx-Rq-JXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="lTa-e5-PWM" customClass="DecksController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cay-Xl-OpX"/>
                         <viewControllerLayoutGuide type="bottom" id="wU7-CX-PJa"/>
@@ -64,13 +65,59 @@
                     <view key="view" contentMode="scaleToFill" id="XHI-LL-FLf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeZ-3e-Dd4">
+                                <rect key="frame" x="113" y="597" width="189" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.33950396150000001" green="0.67570840369999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="tintColor" red="0.9334351206" green="0.9334351206" blue="0.9334351206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Random Deck"/>
+                                <connections>
+                                    <action selector="getRandomDeck:" destination="lTa-e5-PWM" eventType="touchUpInside" id="Xfm-bH-mpx"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="311-Pi-7at" userLabel="Cards Collection View">
+                                <rect key="frame" x="10" y="72" width="394" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KCI-6M-Xcg">
+                                    <size key="itemSize" width="80" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardDeckViewCell" id="knI-qU-cNh" customClass="CardsCollectionViewCell" customModule="Count_Royale" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MysteryCard.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2S-W6-twi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="80" height="100"/>
+                                        <connections>
+                                            <outlet property="imgCardView" destination="K2S-W6-twi" id="41m-Hz-EZq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Decks" id="YTU-wZ-Zf4"/>
+                    <navigationItem key="navigationItem" title="Get your Deck!" id="U9z-3N-PbI"/>
+                    <connections>
+                        <outlet property="btnRandomDeck" destination="TeZ-3e-Dd4" id="HkB-7G-0u5"/>
+                        <outlet property="cardDeckCollectionView" destination="311-Pi-7at" id="oOA-ol-b43"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvx-Rq-JXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="-510"/>
+            <point key="canvasLocation" x="1344.9275362318842" y="-510.32608695652181"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="L5f-5s-glA">
@@ -85,7 +132,7 @@
                     </tabBar>
                     <connections>
                         <outlet property="mainTabBar" destination="RpT-Oe-7EU" id="8B8-o1-RcS"/>
-                        <segue destination="lTa-e5-PWM" kind="relationship" relationship="viewControllers" id="bnS-Ox-ylP"/>
+                        <segue destination="YbK-78-HEq" kind="relationship" relationship="viewControllers" id="bnS-Ox-ylP"/>
                         <segue destination="nmK-5r-HHF" kind="relationship" relationship="viewControllers" id="nPD-q4-F6A"/>
                     </connections>
                 </tabBarController>
@@ -199,5 +246,27 @@
             </objects>
             <point key="canvasLocation" x="3073.913043478261" y="195.6521739130435"/>
         </scene>
+        <!--Decks-->
+        <scene sceneID="dER-L5-F1J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YbK-78-HEq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Decks" id="YTU-wZ-Zf4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iuc-8y-DTX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lTa-e5-PWM" kind="relationship" relationship="rootViewController" id="Lra-VL-Yw5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zj9-dt-17a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="-510.32608695652181"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="MysteryCard.png" width="200" height="241"/>
+    </resources>
 </document>
