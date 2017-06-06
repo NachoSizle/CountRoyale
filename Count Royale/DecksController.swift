@@ -49,6 +49,8 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
     func getRandomDeckToShow(){
         print("LOAD")
         
+        view.startLoading(title: "Loading")
+        
         self.btnRandomDeck.isEnabled = false
         self.arrNamesImages.removeAll()
         self.arrImagesDownloaded.removeAll()
@@ -140,6 +142,7 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
                                     self.btnRandomDeck.isEnabled = true
                                     self.cardDeckCollectionView.reloadData()
                                 }
+                                
                             }
                         }).resume()
                     })

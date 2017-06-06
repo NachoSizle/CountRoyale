@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031ED07C1EE5CB9E00F24156 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031ED07B1EE5CB9E00F24156 /* LoadingView.swift */; };
 		033209CF1EA68CDB00B760F1 /* DecksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209CE1EA68CDB00B760F1 /* DecksController.swift */; };
 		033209D31EA68E8700B760F1 /* FAIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033209D11EA68E8700B760F1 /* FAIcon.swift */; };
 		033209D41EA68E8700B760F1 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 033209D21EA68E8700B760F1 /* FontAwesome.ttf */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031ED07B1EE5CB9E00F24156 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		033209CE1EA68CDB00B760F1 /* DecksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecksController.swift; sourceTree = "<group>"; };
 		033209D11EA68E8700B760F1 /* FAIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAIcon.swift; sourceTree = "<group>"; };
 		033209D21EA68E8700B760F1 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		033209CD1EA68C4F00B760F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				031ED07B1EE5CB9E00F24156 /* LoadingView.swift */,
 				03434C741EA668710012A907 /* MainTabBarController.swift */,
 				033209CE1EA68CDB00B760F1 /* DecksController.swift */,
 				033209D71EA68FA800B760F1 /* StatisticsController.swift */,
@@ -326,6 +329,7 @@
 				03F763AE1EAFAE18008167F5 /* StatisticsCardsController.swift in Sources */,
 				033C2D561EC4C20900FCC571 /* StatisticsCardsDetailViewController.swift in Sources */,
 				033209D81EA68FA800B760F1 /* StatisticsController.swift in Sources */,
+				031ED07C1EE5CB9E00F24156 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

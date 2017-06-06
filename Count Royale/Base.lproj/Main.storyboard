@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CqM-BG-XuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CqM-BG-XuZ">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,7 +56,6 @@
         <!--Get your Deck!-->
         <scene sceneID="gPW-4H-iwG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvx-Rq-JXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="lTa-e5-PWM" customClass="DecksController" customModule="Count_Royale" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cay-Xl-OpX"/>
@@ -116,6 +115,7 @@
                         <outlet property="cardDeckCollectionView" destination="311-Pi-7at" id="oOA-ol-b43"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rvx-Rq-JXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1344.9275362318842" y="-510.32608695652181"/>
         </scene>

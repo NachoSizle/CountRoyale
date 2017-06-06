@@ -41,3 +41,34 @@ class MainTabBarController: UITabBarController {
 
 }
 
+extension UIView {
+    func setBorderForColor(color: UIColor, width: Float, radius: Float) {
+        self.layer.cornerRadius = CGFloat(radius)
+        self.layer.masksToBounds = true
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = CGFloat(width)
+    }
+    
+    func startLoading(title: String) {
+        let w = frame.size.width
+        let h = frame.size.height
+        let loadingView = LoadingView(frame: CGRect(x: 150, y: 150, width: w/2 - 75, height: h/2 - 75))
+        loadingView.title = title
+        
+        addSubview(loadingView)
+        isUserInteractionEnabled = false
+    }
+    
+    func stopLoading() {
+        for v in subviews {
+            if v.isMember(of: LoadingView.self) {
+                v.removeFromSuperview()
+            }
+        }
+        
+        isUserInteractionEnabled = true
+    }
+    
+}
+
+
