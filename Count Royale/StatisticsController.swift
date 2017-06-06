@@ -147,6 +147,8 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
         
         let peekController = UIViewController()
         
+        peekController.view.startLoading(title: "Loading")
+        
         let nameOfCard:String = arrToUse[indexSelectedRow!]
         let nameOfType:String = arrToDownloadAllPhotos
         
@@ -177,7 +179,15 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
                     print(imageData)
                                         
                     DispatchQueue.main.async {
-                        peekController.view.backgroundColor = UIColor(patternImage: imageData)
+                        
+                        let img: UIImage = self.resizeImage(image: imageData, newWidth: peekController.view.frame.width)
+                        
+                        let imgView: UIImageView = UIImageView(image: img)
+                        imgView.contentMode = .scaleAspectFill
+                        
+                        peekController.view.addSubview(imgView)
+                        
+                        peekController.view.stopLoading()
                     }
                     
                 }).resume()

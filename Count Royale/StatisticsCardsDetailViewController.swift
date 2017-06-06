@@ -23,6 +23,8 @@ class StatisticsCardsDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "backgroundCountRoyalex3.jpg"))
         btnShowMoreInfo.layer.cornerRadius = 20
+        btnShowMoreInfo.setBorderForColor(color: .gray, width: 3.0, radius: 20)
+
     }
 
     override func didReceiveMemoryWarning() {

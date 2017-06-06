@@ -33,6 +33,7 @@
 		0386C89A1EE6FA380008EFE5 /* happyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 0386C8991EE6FA380008EFE5 /* happyFace.png */; };
 		0386C89C1EE6FC1A0008EFE5 /* gotaElixir.png in Resources */ = {isa = PBXBuildFile; fileRef = 0386C89B1EE6FC1A0008EFE5 /* gotaElixir.png */; };
 		03A92C1D1ED496180014EE9F /* backgroundCountRoyalex3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03A92C1C1ED496180014EE9F /* backgroundCountRoyalex3.jpg */; };
+		03EAD3F71EE718C20041DF1E /* getMoreInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EAD3F61EE718C20041DF1E /* getMoreInfo.png */; };
 		03F763AE1EAFAE18008167F5 /* StatisticsCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F763AD1EAFAE18008167F5 /* StatisticsCardsController.swift */; };
 		03FF79F51EA90EAF0028AEE1 /* Barbaros.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FF79F41EA90EAF0028AEE1 /* Barbaros.png */; };
 		C05120CD71DDABCD9737DF30 /* Pods_Count_Royale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0735311A9093D7B3DDDA7E72 /* Pods_Count_Royale.framework */; };
@@ -67,6 +68,7 @@
 		0386C8991EE6FA380008EFE5 /* happyFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = happyFace.png; path = Imagenes.png/happyFace.png; sourceTree = "<group>"; };
 		0386C89B1EE6FC1A0008EFE5 /* gotaElixir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gotaElixir.png; path = Imagenes.png/gotaElixir.png; sourceTree = "<group>"; };
 		03A92C1C1ED496180014EE9F /* backgroundCountRoyalex3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroundCountRoyalex3.jpg; path = Imagenes.png/backgroundCountRoyalex3.jpg; sourceTree = "<group>"; };
+		03EAD3F61EE718C20041DF1E /* getMoreInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = getMoreInfo.png; path = Imagenes.png/getMoreInfo.png; sourceTree = "<group>"; };
 		03F763AD1EAFAE18008167F5 /* StatisticsCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsCardsController.swift; sourceTree = "<group>"; };
 		03FF79F41EA90EAF0028AEE1 /* Barbaros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barbaros.png; path = Imagenes.png/Barbaros.png; sourceTree = "<group>"; };
 		0735311A9093D7B3DDDA7E72 /* Pods_Count_Royale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Count_Royale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 		033209DA1EA7BCAA00B760F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				03EAD3F61EE718C20041DF1E /* getMoreInfo.png */,
 				0386C89B1EE6FC1A0008EFE5 /* gotaElixir.png */,
 				0386C8991EE6FA380008EFE5 /* happyFace.png */,
 				03A92C1C1ED496180014EE9F /* backgroundCountRoyalex3.jpg */,
@@ -269,6 +272,7 @@
 				033209DE1EA7BE0400B760F1 /* GoogleService-Info.plist in Resources */,
 				03A92C1D1ED496180014EE9F /* backgroundCountRoyalex3.jpg in Resources */,
 				036AE31A1EC21A00000CAF04 /* countRoyaleIcon120.png in Resources */,
+				03EAD3F71EE718C20041DF1E /* getMoreInfo.png in Resources */,
 				036AE31D1EC21A1C000CAF04 /* Assets.xcassets in Resources */,
 				03FF79F51EA90EAF0028AEE1 /* Barbaros.png in Resources */,
 			);

@@ -47,6 +47,7 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
         self.cardDeckCollectionView.delegate = self
         self.cardDeckCollectionView.dataSource = self
         btnRandomDeck.layer.cornerRadius = 20
+        btnRandomDeck.setBorderForColor(color: .gray, width: 3.0, radius: 20)
         lblMyDecks.layer.cornerRadius = 20
         
         imgFace.isHidden = true
