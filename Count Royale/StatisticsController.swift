@@ -24,7 +24,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
     var arrToDownloadAllPhotos: String = ""
     var arrToUse: [String] = []
     var imageDownloaded: UIImage = UIImage()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -144,6 +144,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
         
         print(arrToUse[indexSelectedRow!])
         
+        
         let peekController = UIViewController()
         
         let nameOfCard:String = arrToUse[indexSelectedRow!]
@@ -177,7 +178,6 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
                                         
                     DispatchQueue.main.async {
                         peekController.view.backgroundColor = UIColor(patternImage: imageData)
-                        
                     }
                     
                 }).resume()
@@ -207,6 +207,8 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         let destination = segue.destination
+        
+        (destination as! StatisticsCardsDetailViewController).view.startLoading(title: "Loading")
         
         if let collectionViewCellSelected = sender as? CardsCollectionViewCell {
             let indexOfCellSelected = self.cardCollectionView.indexPath(for: collectionViewCellSelected)
@@ -239,6 +241,7 @@ class StatisticsController: UIViewController, UICollectionViewDelegate, UICollec
                         DispatchQueue.main.async {
                             (destination as! StatisticsCardsDetailViewController).imgViewCardDetail.image = imageData
                             (destination as! StatisticsCardsDetailViewController).imgViewCardDetail.contentMode = .scaleAspectFill
+                            (destination as! StatisticsCardsDetailViewController).view.stopLoading()
                         }
                     }).resume()
                 })

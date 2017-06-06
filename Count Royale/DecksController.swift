@@ -17,17 +17,24 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
     @IBAction func getRandomDeck(_ sender: UIButton) {
         getRandomDeckToShow()
     }
+    @IBOutlet var lblMyDecks: UILabel!
+    @IBOutlet var imgFace: UIImageView!
+    @IBOutlet var averageLbl: UILabel!
+    @IBOutlet var numAverageLbl: UILabel!
+    @IBOutlet var imgGota: UIImageView!
     
     let nameCommonCards: [String] = ["Arqueras", "Barbaros", "BarbarosDeElite", "Bombardero", "Caballero", "Canion", "Descarga", "Duendes", "DuendesConLanza", "Esbirros", "EspiritusDeFuego", "EspirituDeHielo", "Esqueletos", "Flechas", "GiganteNoble", "HordaDeEsbirros", "Mortero", "PandillaDeDuendes", "TorreTesla"]
     
     let nameSpecialCards: [String] = ["ArieteDeBatalla", "BolaDeFuego", "ChozaDeBarbaros", "ChozaDeDuendes", "Cohete", "Curacion", "Gigante", "GolemDeHielo", "Horno", "Lanzadardos", "Lapida", "Mago", "MegaEsbirro", "MiniPekka", "Montapuercos", "Mosquetera", "RecolectorDeElixir", "TorreBombardera", "TorreInfernal", "TrioDeMosqueteras", "Valquiria"]
     
-    let nameEpicCards: [String] = ["Ballesta", "BarrilDeDuendes", "BebeDragon", "Bruja", "Clon", "EjercitoDeEsqueletos", "Espejo", "EsqueletoGigante", "Furia", "Globo", "Golem", "Guardias", "Hielo", "Lanzarrocas", "P.E.K.K.A.", "PrincipeOscuro", "Principe", "Rayo", "Tornado", "Veneno", "Verdugo"]
+    let nameEpicCards: [String] = ["Ballesta", "BarrilDeDuendes", "BebeDragon", "Bruja", "Clon", "EjercitoDeEsqueletos", "Espejo", "EsqueletoGigante", "Furia", "Globo", "Golem", "Guardias", "Hielo", "Lanzarrocas", "PEKKA", "PrincipeOscuro", "Principe", "Rayo", "Tornado", "Veneno", "Verdugo"]
     
     let nameLegendaryCards: [String] = ["Bandida", "BrujaNocturna", "Cementerio", "Chispitas", "DragonInfernal", "Tronco", "Leniador", "MagoDeHielo", "MagoElectrico", "Minero", "Princesa", "SabuesoDeLava"]
     
     var arrImagesDownloaded: [UIImage] = []
     var arrNamesImages: [Int] = []
+    var countCardsLoaded: Int = 0
+    var numAverage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +46,13 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
         
         self.cardDeckCollectionView.delegate = self
         self.cardDeckCollectionView.dataSource = self
+        btnRandomDeck.layer.cornerRadius = 20
+        lblMyDecks.layer.cornerRadius = 20
+        
+        imgFace.isHidden = true
+        averageLbl.isHidden = true
+        numAverageLbl.isHidden = true
+        imgGota.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +64,9 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
         print("LOAD")
         
         view.startLoading(title: "Loading")
+        
+        self.countCardsLoaded = 0
+        self.numAverage = 0
         
         self.btnRandomDeck.isEnabled = false
         self.arrNamesImages.removeAll()
@@ -111,12 +128,25 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
                     default:
                         nameOfTypeCard = "Common"
                 }
-                                
+                
+                let databaseRef = FIRDatabase.database().reference()
+                
                 let storageRef = FIRStorage.storage().reference()
                 
                 if ((FIRAuth.auth()?.currentUser?.uid) != nil) {
                     
                     let ref = storageRef.child("Cards").child(nameOfTypeCard).child(nameOfCardToDownload + ".png")
+                    let refDatabase = databaseRef.child("Cards").child(nameOfCardToDownload)
+                    
+                    refDatabase.observeSingleEvent(of: .value, with: { (snapshot) in
+                        // Get user value
+                        let value = snapshot.value as? NSDictionary
+                        let elixirNum = value?["elixirNum"] as! Int
+                        
+                        self.numAverage += elixirNum
+                    }) { (error) in
+                        print(error.localizedDescription)
+                    }
                     
                     ref.downloadURL(completion: { (url, error) in
                         
@@ -142,7 +172,6 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
                                     self.btnRandomDeck.isEnabled = true
                                     self.cardDeckCollectionView.reloadData()
                                 }
-                                
                             }
                         }).resume()
                     })
@@ -171,12 +200,27 @@ class DecksController: UIViewController, UICollectionViewDelegate, UICollectionV
             cell.imgCardView.image = #imageLiteral(resourceName: "MysteryCard.png")
         } else {
             cell.imgCardView.image = arrImagesDownloaded[indexPath.row]
+            self.countCardsLoaded += 1
+            if (self.countCardsLoaded == self.arrNamesImages.count){
+                self.view.stopLoading()
+                imgFace.isHidden = false
+                averageLbl.isHidden = false
+                let intToDouble = Double(self.numAverage)*10
+                let doubleAux = round(intToDouble/8)/10
+                numAverageLbl.text = String(doubleAux)
+                numAverageLbl.isHidden = false
+                imgGota.isHidden = false
+                self.countCardsLoaded = 0
+            }
         }
         
         cell.imgCardView.contentMode = .scaleAspectFit
+        
+        
+        
         return cell
     }
-
+    
     /*
     // MARK: - Navigation
 

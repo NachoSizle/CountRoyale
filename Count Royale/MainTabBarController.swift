@@ -52,7 +52,7 @@ extension UIView {
     func startLoading(title: String) {
         let w = frame.size.width
         let h = frame.size.height
-        let loadingView = LoadingView(frame: CGRect(x: 150, y: 150, width: w/2 - 75, height: h/2 - 75))
+        let loadingView = LoadingView(frame: CGRect(x: h/5 - 5, y: w/2 + 100, width: w/2 - 75, height: 100))
         loadingView.title = title
         
         addSubview(loadingView)

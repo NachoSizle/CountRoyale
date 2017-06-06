@@ -1,9 +1,5 @@
 //
 //  LoadingView.swift
-//  MagicSchedule
-//
-//  Created by Alex on 4/6/17.
-//  Copyright © 2017 CU. All rights reserved.
 //
 
 import UIKit

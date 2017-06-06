@@ -30,6 +30,8 @@
 		036AE3271EC23E4F000CAF04 /* Specials.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE3221EC23E4F000CAF04 /* Specials.png */; };
 		036AE3291EC23FEF000CAF04 /* Legendaries.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE3281EC23FEF000CAF04 /* Legendaries.png */; };
 		036AE32B1EC245F0000CAF04 /* deskIco.png in Resources */ = {isa = PBXBuildFile; fileRef = 036AE32A1EC245F0000CAF04 /* deskIco.png */; };
+		0386C89A1EE6FA380008EFE5 /* happyFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 0386C8991EE6FA380008EFE5 /* happyFace.png */; };
+		0386C89C1EE6FC1A0008EFE5 /* gotaElixir.png in Resources */ = {isa = PBXBuildFile; fileRef = 0386C89B1EE6FC1A0008EFE5 /* gotaElixir.png */; };
 		03A92C1D1ED496180014EE9F /* backgroundCountRoyalex3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03A92C1C1ED496180014EE9F /* backgroundCountRoyalex3.jpg */; };
 		03F763AE1EAFAE18008167F5 /* StatisticsCardsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F763AD1EAFAE18008167F5 /* StatisticsCardsController.swift */; };
 		03FF79F51EA90EAF0028AEE1 /* Barbaros.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FF79F41EA90EAF0028AEE1 /* Barbaros.png */; };
@@ -62,6 +64,8 @@
 		036AE3221EC23E4F000CAF04 /* Specials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Specials.png; path = Imagenes.png/Specials.png; sourceTree = "<group>"; };
 		036AE3281EC23FEF000CAF04 /* Legendaries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Legendaries.png; path = Imagenes.png/Legendaries.png; sourceTree = "<group>"; };
 		036AE32A1EC245F0000CAF04 /* deskIco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deskIco.png; path = Imagenes.png/deskIco.png; sourceTree = "<group>"; };
+		0386C8991EE6FA380008EFE5 /* happyFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = happyFace.png; path = Imagenes.png/happyFace.png; sourceTree = "<group>"; };
+		0386C89B1EE6FC1A0008EFE5 /* gotaElixir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gotaElixir.png; path = Imagenes.png/gotaElixir.png; sourceTree = "<group>"; };
 		03A92C1C1ED496180014EE9F /* backgroundCountRoyalex3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroundCountRoyalex3.jpg; path = Imagenes.png/backgroundCountRoyalex3.jpg; sourceTree = "<group>"; };
 		03F763AD1EAFAE18008167F5 /* StatisticsCardsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsCardsController.swift; sourceTree = "<group>"; };
 		03FF79F41EA90EAF0028AEE1 /* Barbaros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barbaros.png; path = Imagenes.png/Barbaros.png; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		033209DA1EA7BCAA00B760F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0386C89B1EE6FC1A0008EFE5 /* gotaElixir.png */,
+				0386C8991EE6FA380008EFE5 /* happyFace.png */,
 				03A92C1C1ED496180014EE9F /* backgroundCountRoyalex3.jpg */,
 				035161591ECB6644008D866C /* initImageCountRoyale.jpeg */,
 				033C2D531EC4C1E200FCC571 /* Bandida.png */,
@@ -246,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0386C89C1EE6FC1A0008EFE5 /* gotaElixir.png in Resources */,
 				036AE31B1EC21A00000CAF04 /* countRoyaleIcon180.png in Resources */,
 				0351615B1ECB6644008D866C /* initImageCountRoyale.jpeg in Resources */,
 				033C2D541EC4C1E200FCC571 /* Bandida.png in Resources */,
@@ -253,6 +260,7 @@
 				03434C7D1EA668710012A907 /* LaunchScreen.storyboard in Resources */,
 				036AE3291EC23FEF000CAF04 /* Legendaries.png in Resources */,
 				036AE3241EC23E4F000CAF04 /* Epic.png in Resources */,
+				0386C89A1EE6FA380008EFE5 /* happyFace.png in Resources */,
 				036AE3231EC23E4F000CAF04 /* Common.png in Resources */,
 				036AE32B1EC245F0000CAF04 /* deskIco.png in Resources */,
 				03434C781EA668710012A907 /* Main.storyboard in Resources */,
